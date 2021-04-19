@@ -3,5 +3,5 @@ alias zshconfig="vim ~/.zshrc"
 alias zshload="source ~/.zshrc"
 alias zshalias="vim ~/.aliases" # edit this file
 
-# dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# setup
+alias setup='/usr/bin/git --git-dir=$HOME/.setup/ --work-tree=$HOME'
