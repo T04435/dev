@@ -5,3 +5,16 @@ alias zshalias="vim ~/.aliases" # edit this file
 
 # setup
 alias setup='/usr/bin/git --git-dir=$HOME/.setup/ --work-tree=$HOME'
+
+# projects
+alias helix='$HOME/helix'
+alias helix-internal='helix && internal'
+alias helix-clients='helix && clients'
+alias hub='helix-internal && helix-hub'
+alias proto='helix-internal && protoapp'
+alias awayco='helix-clients && awayco/monorepo'
+alias awayco-admin='helix-clients && awayco/admin'
+
+# helpers
+# removes all docker containers
+alias dk_rm='docker rm -vf $(docker ps -a -q)'

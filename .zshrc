@@ -82,6 +82,7 @@ plugins=(
 
 # plugins settings
 ZSH_TMUX_AUTOSTART=true
+tmux source ~/.tmux.conf
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,13 +107,15 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-source .aliases
+source ~/.aliases
 
 # deno
 export PATH="/Users/t04435/.deno/bin:$PATH"
 
 # bash-completion
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+    . /opt/local/etc/profile.d/bash_completion.sh
+fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
