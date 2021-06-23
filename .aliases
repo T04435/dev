@@ -18,3 +18,7 @@ alias awayco-admin='helix-clients && awayco/admin'
 # helpers
 # removes all docker containers
 alias dk_rm='docker rm -vf $(docker ps -a -q)'
+
+# ssh
+alias sshconfig='vim ~/.ssh/config'
+

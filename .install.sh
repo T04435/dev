@@ -12,18 +12,15 @@ echo "Found OS: $unameOut";
 
 
 if [[ $isLinux ]]
-then
-  echo 'eval "$(/home/docker/.linuxbrew/bin/brew shellenv)"' >> /home/docker/.profile
-  eval "$(/home/docker/.linuxbrew/bin/brew shellenv)" ;
-  sudo apt-get install build-essential -y
-  brew install gcc
-else
-  echo 'Installing packages'
-  
-  # add brew
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  # install brew formulaes, add new line [formulae name \]
-  brew install \
+  then
+    sudo apt-get install build-essential -y
+fi
+
+# add brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install packages
+brew install \
     bash-completion \
     bazelisk \
     git-gui \
@@ -32,11 +29,10 @@ else
     python@3.7 \
     tmux \
     yarn \
-fi
-
+    deno \
+    tmux \
 
 # deno
-curl -fsSL https://deno.land/x/install/install.sh | sh
 deno upgrade --version 1.8.3
 deno install --allow-read --allow-write --allow-run --unstable -f --name dnit https://deno.land/x/dnit@dnit-v1.12.1/main.ts
 
@@ -44,8 +40,7 @@ deno install --allow-read --allow-write --allow-run --unstable -f --name dnit ht
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk version
-sdk install java 8.0.282.j9-adpt
-
+sdk install java 11.0.11.j9-adpt
 
 # Install python packages
 sudo pip3 install doit pystache
