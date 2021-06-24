@@ -1,0 +1,7 @@
+[user]
+	name = Fidel Torres
+	email = fidel@helixcollective.com
+[init]
+	defaultBranch = main
+[core]
+	excludesFile = /Users/t04435/.gitignore
