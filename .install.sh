@@ -22,13 +22,7 @@ fi
 # install packages
 brew install \
     bash-completion \
-    git-gui \
-    maven \
     nvm \
-    python@3.7 \
     tmux \
     yarn \
     tmux \
-
-# Install python packages
-sudo pip3 install doit pystache
