@@ -25,4 +25,3 @@ brew install \
     nvm \
     tmux \
     yarn \
-    tmux \
